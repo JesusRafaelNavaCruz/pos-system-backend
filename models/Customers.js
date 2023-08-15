@@ -18,18 +18,23 @@ const CustomersSchema = Schema({
     type: String,
     require: true,
   },
-  phone: {
+  phoneNumber: {
     type: String,
     require: false,
   },
-  lastVisit: {
-    type: Date,
-    require: true,
-  },
-  status: {
-    type: Boolean,
-    default: true,
-    required: true,
+  address: {
+    street: { 
+      type: String 
+    },
+    city: { 
+      type: String 
+    },
+    state: { 
+      type: String 
+    },
+    zipCode: { 
+      type: String 
+    },
   },
   createdAt: {
     type: Date,
