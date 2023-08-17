@@ -1,11 +1,5 @@
 const Users = require("../models/Users");
 
-const testing = async (req, res) => {
-  res.status(200).send({
-    data: "Testing...",
-  });
-};
-
 const addUser = async (req, res) => {
   const data = req.body;
 
