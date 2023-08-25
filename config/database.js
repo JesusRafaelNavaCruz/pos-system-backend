@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
+const config = require("./config");
 
-const dbURI = 'mongodb://localhost:27017/restaurant_pos';
+const dbURI = config.databaseUrl;
 
 mongoose.connect(dbURI, {
   useNewUrlParser: true,
