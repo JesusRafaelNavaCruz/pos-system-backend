@@ -12,11 +12,11 @@ const CustomersSchema = Schema({
   },
   secondLastName: {
     type: String,
-    require: true,
+    require: false,
   },
   email: {
     type: String,
-    require: true,
+    require: false,
   },
   phoneNumber: {
     type: String,
