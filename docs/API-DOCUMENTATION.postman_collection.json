@@ -357,6 +357,298 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "MENU",
+			"item": [
+				{
+					"name": "MENU ITEM",
+					"item": [
+						{
+							"name": "ADD MENU ITEM",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Coca-cola\",\n    \"description\": \"Coca-cola 500ml\",\n    \"price\": \"20\",\n    \"category\": [\n        {\"_id\":\"64e7f1aba220ccae8d8fe7a7\"}\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/menu-item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"menu-item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "FIND MENU ITEM BY ID",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/menu-item/{{menuItemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"menu-item",
+										"{{menuItemId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "LIST MENU ITEMS",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/menu-item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"menu-item"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UPDATE MENU ITEM",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Coca-cola 500\",\n    \"description\": \"Coca-cola 500ml\",\n    \"price\": \"20\",\n    \"category\": [\n        {\"_id\":\"64e7f1aba220ccae8d8fe7a7\"}\n    ],\n    \"availiable\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/menu-item/{{menuItemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"menu-item",
+										"{{menuItemId}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DELETE MENU ITEM",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/menu-item/{{menuItemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"menu-item",
+										"{{menuItemId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "LIST MENUS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/menu",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MENU",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Desayunos\",\n    \"items\": [\n        {\n            \"_id\": \"{{menuItemId}}\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/menu/{{menuId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"menu",
+								"{{menuId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FIND MENU BY ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/menu/{{menuId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"menu",
+								"{{menuId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MENU",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/menu/{{menuId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"menu",
+								"{{menuId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ADD MENU",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Menu Principal\",\n    \"description\": \"lorem ipsum lorem ipsum\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/menu",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

@@ -4,6 +4,7 @@ const auth = require("../middleware/auth");
 
 const api = express.Router();
 
+
 api.get("/", auth, categoryController.getAllCategories);
 api.get("/:id", auth, categoryController.findCategoryById);
 api.post("/", auth, categoryController.addCategory);
