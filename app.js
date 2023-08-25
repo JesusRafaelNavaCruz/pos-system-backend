@@ -19,9 +19,11 @@ require("./config/database");
 //Routes
 const usersRoutes = require("./routes/usersRoutes");
 const customerRoutes = require("./routes/customerRoutes");
+const categoryRoutes = require("./routes/categoryRoutes");
 
 app.use("/api/users", usersRoutes);
 app.use("/api/customers", customerRoutes);
+app.use("/api/category", categoryRoutes);
 
 
 //Manejo de errores
